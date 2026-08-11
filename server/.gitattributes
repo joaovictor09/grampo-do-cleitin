@@ -1,0 +1,10 @@
+src/infra/prisma/contract.json linguist-generated
+src/infra/prisma/contract.d.ts linguist-generated
+src/infra/prisma/end-contract.json linguist-generated
+src/infra/prisma/end-contract.d.ts linguist-generated
+src/infra/prisma/start-contract.json linguist-generated
+src/infra/prisma/start-contract.d.ts linguist-generated
+src/infra/prisma/ops.json linguist-generated
+src/infra/prisma/migration.json linguist-generated
+migrations/snapshots/**/contract.json linguist-generated
+migrations/snapshots/**/contract.d.ts linguist-generated
