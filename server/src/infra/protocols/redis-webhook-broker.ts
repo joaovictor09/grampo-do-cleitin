@@ -1,6 +1,5 @@
 import { WebhookLog } from "@/features/webhooks/entities/webhook-log";
-import { WebhookBroker } from "@/http/protocols/webhook-broker";
-import { Client } from "@/infra/protocols/local-webhook-broker";
+import { Client, WebhookBroker } from "@/features/webhooks/protocols/webhook-broker";
 import { redis } from "@/infra/redis";
 
 const CHANNEL_PREFIX = "webhook:";

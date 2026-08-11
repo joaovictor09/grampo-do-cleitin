@@ -1,4 +1,4 @@
-import { WebhookBroker } from "@/http/protocols/webhook-broker";
+import { WebhookBroker } from "@/features/webhooks/protocols/webhook-broker";
 import { CreateWebhookLogDTO } from "../dtos/create-webhook-log-dto";
 import { WebhookLogRepository } from "../repositories/webhooks-log-repository";
 import { UseCase } from "@/core/protocols/use-case";

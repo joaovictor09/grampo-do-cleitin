@@ -1,5 +1,5 @@
 import { UseCase } from "@/core/protocols/use-case";
-import { WebhookBroker } from "@/http/protocols/webhook-broker";
+import { WebhookBroker } from "@/features/webhooks/protocols/webhook-broker";
 import { WebhookLog } from "../entities/webhook-log";
 
 interface OnEventParams {

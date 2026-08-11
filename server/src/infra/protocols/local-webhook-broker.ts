@@ -1,7 +1,5 @@
 import { WebhookLog } from "@/features/webhooks/entities/webhook-log";
-import { WebhookBroker } from "@/http/protocols/webhook-broker";
-
-export type Client = (payload: WebhookLog) => void;
+import { Client, WebhookBroker } from "@/features/webhooks/protocols/webhook-broker";
 
 const rooms = new Map<string, Set<Client>>();
 
