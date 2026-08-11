@@ -1,8 +1,8 @@
-import { app } from "./app";
-import { env } from "./env";
-import { db } from "./infra/drizzle";
-import { redis } from "./infra/redis";
-import { redisWebhookBroker } from "./infra/protocols/redis-webhook-broker";
+import { app } from "@/main/app";
+import { env } from "@/env";
+import { db } from "@/infra/drizzle";
+import { redis } from "@/infra/redis";
+import { redisWebhookBroker } from "@/infra/protocols/redis-webhook-broker";
 
 app
 	.listen({

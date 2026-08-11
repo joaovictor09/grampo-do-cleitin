@@ -1,8 +1,8 @@
 import fastify, { type FastifyReply } from "fastify";
-import { webhooksRoutes } from "./http/controllers/webhooks/routes";
+import { webhooksRoutes } from "@/http/controllers/webhooks/routes";
 import fastifyCors from "@fastify/cors";
 import { z, ZodError } from "zod";
-import { env } from "./env";
+import { env } from "@/env";
 
 export const app = fastify();
 
