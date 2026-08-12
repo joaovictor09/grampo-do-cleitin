@@ -34,10 +34,12 @@ export async function connectWebhookSSE(
   send({ ok: true }, 'connected')
 
   const ping = setInterval(() => reply.raw.write(': ping\n\n'), 15_000)
+  const lastEventId = request.headers['last-event-id']
 
   const { closeConnection } = await subscribeToWebhookUseCase.execute({
     id,
     onEvent: ({ data, event, id }) => send(data, event, id),
+    lastEventId: lastEventId ? lastEventId as string : undefined
   })
 
   request.raw.on('close', () => {

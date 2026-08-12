@@ -19,8 +19,26 @@ export class InMemoryWebhookLogsRepository implements WebhookLogRepository {
     return webhook
   }
 
-  fetchAll(): Promise<any> {
-    throw new Error("Method not implemented.");
+  async fetchAll(): Promise<WebhookLog[]> {
+    return this.itens
+  }
+
+  async fetchAfter(webhookLogId: string): Promise<WebhookLog[]> {
+    const actualWebhook = this.itens.find(log => log.id === webhookLogId)
+
+    if (!actualWebhook) {
+      return []
+    }
+
+    const webhookLogs = this.itens
+      .filter(
+        (log) => 
+          log.webhookId === actualWebhook.webhookId &&
+          log.receivedAt > actualWebhook.receivedAt
+      )
+      .sort((a, b) => a.receivedAt.localeCompare(b.receivedAt))
+
+    return webhookLogs
   }
 
 }
